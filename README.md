@@ -2,7 +2,7 @@
 
 # Description
 
-I am a movie & tv show lover but I do not know what I want to watch. I open watchopedia and search by (actor, tv show, or movie). The website populates results of the search. I can save some of those titles to favorites. 
+I am a movie & tv show lover but I do not know what I want to watch. I open watchopedia and search by (actor, tv show, or movie). The website populates results of the search. I can save some of those titles to favorite. 
 
 # Technologies Used
 
