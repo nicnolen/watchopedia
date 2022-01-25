@@ -35,7 +35,7 @@ _CURRENTLY_
 
 # Link
 
-https://felipezintzun.github.io/watchopedia/
+https://nicnolen.github.io/watchopedia/
 
 # Screenshots
 
