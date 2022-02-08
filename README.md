@@ -6,7 +6,7 @@
   - [Technologies Used](#technologies-used)
   - [Usage Instructions](#usage-instructions)
   - [Challenges](#challenges)
-  - [Future Development)(#future-development)
+  - [Future Development](#future-development)
   - [License Section](#license)
   - [Contributors](#contributors)
   - [Contact Me](#contact-me)
