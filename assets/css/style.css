@@ -25,11 +25,8 @@ html {
 }
 
 html body {
-  /* height: 95vh; */
   display: flex;
   flex-flow: column wrap;
-  /* justify-content: space-around; */
-  /* align-items: center;  */
   min-height: 100vh;
 }
 
@@ -50,14 +47,10 @@ html body {
 .section-title {
   font-size: 2.5vw;
   font-weight: bold;
-  /* padding: 1vw; */
   text-align: center;
   padding-top: 10px;
-  margin: 0 auto 15px auto; 
+  margin: 0 auto 15px auto;
   width: 65%;
-  /* border: 2px solid var(--gray); */
-  /* border-radius: 12px; */
-  /* background: var(--bg-sectionTitle); */
   color: var(--bg-show);
 }
 
@@ -72,7 +65,6 @@ header {
 
 .header-title {
   background: url('../images/watchopedia-logo.svg') no-repeat;
-  /* background-image: url('../images/watchopedia-logo.svg'); */
   display: block;
   height: 13vh;
   width: auto;
@@ -115,7 +107,6 @@ form label {
 
 .movie-style {
   color: #4a4a4a;
-  /* background-color: red; */
 }
 
 /* SHOW SECTION STYLES START */
@@ -131,10 +122,10 @@ form label {
   border-radius: 20px;
   flex: 0 1 24%;
   box-sizing: border-box;
-  margin: 1rem .25em;
+  margin: 1rem 0.25em;
 }
 
-.image.is-4by3{
+.image.is-4by3 {
   padding-top: 100%;
   height: 350px;
   width: 400px;
@@ -154,7 +145,6 @@ a:focus {
   display: block;
   position: relative;
   border-radius: 1rem;
-  /* background-color: var(--bg-white); */
   color: var(--black);
 }
 .menu {
@@ -183,29 +173,19 @@ a:focus {
 .actor-image {
   max-width: 50vh;
   align-items: center;
-  /* display: inline-block; */
-  /* height: auto; */
   flex: 1 12%;
   margin-right: 20px;
   display: flex;
   flex-wrap: wrap;
-  float:left;
+  float: left;
   margin: auto;
-  border-radius: .5rem;
-  /* width: 100%;
-  height: auto; */
-  /* position: absolute; */
-  /* left: 5vw; */
-  /* padding: 2vw; */
+  border-radius: 0.5rem;
 }
 
 /* Actor information container */
 .actorInfoContainer {
-  /* display: flex;
-  justify-content: flex-end; */
   margin: 1vw;
   display: inline-block;
-  /* vertical-align: top; */
   padding: 0 0 0 5px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -221,16 +201,12 @@ a:focus {
   flex: 100%;
 }
 
-
-
-
 .title-list-wrapper {
   flex: 1;
   margin: 0 20px 20px;
 }
 
 .list-title {
-  /*color: var(--secondary);*/
   font-size: 2.6rem;
   color: white;
 }
@@ -241,9 +217,8 @@ a:focus {
   height: calc(100% - 50px);
   border-radius: 12px;
   border: 2px solid var(--grey);
-  color:white;
+  color: white;
 }
-
 
 .title-item {
   padding: 15px 15px;
@@ -296,31 +271,29 @@ a:focus {
 }
 
 .watch-list_element {
-	position: relative;
+  position: relative;
 }
 .watch-list_element span {
-	content: "x";
-	top: 7px;
-	right: 7px;
-	background-color: #ffff;
-	width: 20px;
-	height: 20px;
-	display: block;
-	font-weight: 600;
-	font-size: 12px;
-	padding-left: 5px;
-	border: 1px solid white;
-	border-radius: 50%;
-	cursor: pointer;
-  color:white;
+  content: 'x';
+  top: 7px;
+  right: 7px;
+  background-color: #ffff;
+  width: 20px;
+  height: 20px;
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  padding-left: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
 }
 .watch-list_element .watch-list_img {
-	width: 120px;
-	height: 170px;
-	margin: 10px;
+  width: 120px;
+  height: 170px;
+  margin: 10px;
 }
-
-
 
 /* FOOTER STYLE START */
 footer {

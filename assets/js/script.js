@@ -17,7 +17,7 @@ var movieResultsEl = document.getElementById('movie-results');
 // the movie db api key
 var movieDbApi = '40ead071b983da851d42031943eb549a';
 // MOVIE ADD TO FAVORITES BUTTO
-var modalButtonEl = document.querySelector("#modal-button");
+var modalButtonEl = document.querySelector('#modal-button');
 
 // Define the show section
 var showSectionEl = document.getElementById('show-section');
@@ -29,26 +29,18 @@ var actorTitleEl = document.getElementById('actor-title');
 // Declare movie error messages container
 var errorEl = document.getElementById('error');
 
-var movieFavhEl = document.getElementById('movies-to- ')
-var showFavEl = document.getElementById('shows-to-watch')
-var watchSection = document.getElementById('watch-section')
-
-var saveLocal = JSON.parse(localStorage.getItem('watchopedia')) || []
-
-var savedShow = document.getElementById('saved-show');
-// var favoritesSectionEl = getElementById()
-
+var saveLocal = JSON.parse(localStorage.getItem('watchopedia')) || [];
 
 // Define the show section
 var showSectionEl = document.getElementById('show-section');
 
 // Add to Watch Later list
-var modalButtonEl = document.querySelector("#modal-button");
-var watchListEl = document.querySelector("#watch-list");
+var modalButtonEl = document.querySelector('#modal-button');
+var watchListEl = document.querySelector('#watch-list');
 
 // Declare button
 var buttonEL = document.getElementById('searchBtn');
-var favoritesButtonEl = document.getElementById('save-title')
+var favoritesButtonEl = document.getElementById('save-title');
 /* GLOBAL VARIABLES END */
 
 /* MOVIE SECTION START */
@@ -136,16 +128,16 @@ var showMovieInfo = function (name) {
       movieResultsEl.append(movieInfoDiv);
       movieSectionEl.append(movieResultsEl);
     }
-  } 
+  }
 };
 /* MOVIE SECTION END */
 
 /* SHOW SECTION START */
 function searchShow(query) {
   const url = `https://api.tvmaze.com/search/shows?q=${query}`;
-  fetch(url).then((response) => {
+  fetch(url).then(response => {
     if (response.ok) {
-      response.json().then((jsonData) => {
+      response.json().then(jsonData => {
         if (jsonData.length === 0) {
           invalidShow();
           return;
@@ -163,7 +155,7 @@ function searchShow(query) {
           for (let i = 0; i < jsonData.length; i++) {
             // jsonData.forEach(element => {
             let element = jsonData[i];
-            console.log(element)
+            console.log(element);
             htmlCode += `
             <div class="card is-flex-column is-justify-content-space-between" id="tvshowsnav"> 
          
@@ -194,10 +186,7 @@ function searchShow(query) {
     }
   });
 }
-
 /* SHOW SECTION ENDS */
-
-
 
 /* ACTOR SECTION START */
 // the movie DB API call to get actor id. Note: name parameter is defined as the input value
@@ -370,51 +359,6 @@ var showActorInfo = function (actorId) {
 };
 /* ACTOR SECTION ENDS */
 
-/* POPULATE FAVORITES SECTION  */
-// var populateFavorites = function (jsonData, name) {
-//   // define select element value
-//   var chooseValue = chooseSearch.value;
-//   // define option values
-//   var movieValue = movieOption.value;
-//   var showValue = showOption.value;
-//   var taskIdCounter = 0;
-
-//   if (name === '') {
-//     return;
-//   } else {
-//     if (chooseValue === showValue) {
-//       // var saveShow = [];
-//       // run a function that populates the favorites section
-//       var getShow = JSON.parse(localStorage.getItem('show-name'));
-//       // saveShow.innerHTML = getShow;
-//       console.log(getShow);
-//       for (i = 0; i < getShow.length; i++) {
-//         var shows = getShow[i];
-//         var movieName = getShow[i].show.name;
-//         var showFavList = document.createElement('li');
-//         showFavList.setAttribute('data-task-id', taskIdCounter);
-//         showFavList.textContent = movieName;
-//         shows.innerHTML = taskIdCounter++;
-//         favoritesButtonEl.innerHTML = getShow[i].innerHTML;
-//         console.log(favoritesButtonEl);
-//         showFavEl.appendChild(showFavList);
-//         favoritesListEl.appendChild(showFavEl);
-//       }
-//     } else if (chooseValue === movieValue) {
-//       var saveMovie = [];
-//       // run a function that populates the favorites section
-//       saveMovie = JSON.parse(localStorage.getItem('movie-name'));
-//       var movieFavList = document.createElement('li');
-//       movieFavList.textContent = name;
-//       movieFavEl.appendChild(showFavList);
-//       favoritesListEl.appendChild(movieFavEl);
-//     } else {
-//       invalidInput();
-//       return;
-//     }
-//   }
-// };
-
 /* ERROR MESSAGES START */
 // Function for invalid movies
 var invalidMovie = function () {
@@ -464,11 +408,9 @@ var connectIssue = function () {
   errorEl.style.color = 'red';
   return;
 };
-
 /* ERROR MESSAGES END */
 
 /* EVENT LISTENERS START */
-
 // Button to prevent default, and check if an input was submitted
 buttonEL.addEventListener('click', function (event) {
   // prevent page refresh
@@ -486,7 +428,6 @@ buttonEL.addEventListener('click', function (event) {
   }
 });
 
-/* EVENT LISTENERS START */
 var functionSelector = function () {
   // set name value
   var name = inputEl.value.trim();
@@ -507,7 +448,6 @@ var functionSelector = function () {
       localStorage.setItem('movieSearch', inputEl.value);
       getMovieSearch(name);
     } else if (chooseValue === showValue) {
-      // localStorage.setItem('showSearch', inputEl.value);
       searchShow(name);
     } else {
       invalidInput();
@@ -516,47 +456,15 @@ var functionSelector = function () {
   }
 };
 
-// favoritesButtonEl.addEventListener('click', function() {
-
-//    var name = inputEl.value.trim();
-// // run a function that populates the favorites section
-// // set the movie poster to local storage
-//    localStorage.setItem('name', JSON.stringify(name))
-// })
-
-function addFavoriteShow(event) {
- 
-  var newShow = {
-    src: event.getAttribute("data-src"), 
-    title: event.getAttribute("data-title"), 
-    id: event.getAttribute("data-movieId")
-  }
-console.log(newShow);
-  saveLocal.push (newShow)
-  localStorage.setItem ('watchopedia', JSON.stringify(saveLocal))
-  displayLocal()
-}
 /* EVENT LISTENERS END */
 
 function displayLocal() {
-  var saveLocal = JSON.parse(localStorage.getItem('watchopedia')) || []
+  var saveLocal = JSON.parse(localStorage.getItem('watchopedia')) || [];
 
-  var previousFav =''
-  for (let i = 0 ; i <saveLocal.length;i++){
-     previousFav += `<li id="saved-show"><img src="${saveLocal[i].src}" /><br /><h6>${saveLocal[i].title}</h6></li><button class="deleteBtn" data-Id="${saveLocal[i].id}" onclick="deleteFavoriteShow(this)">Delete</button>`
+  var previousFav = '';
+  for (let i = 0; i < saveLocal.length; i++) {
+    previousFav += `<li id="saved-show"><img src="${saveLocal[i].src}" /><br /><h6>${saveLocal[i].title}</h6></li><button class="deleteBtn" data-Id="${saveLocal[i].id}" onclick="deleteFavoriteShow(this)">Delete</button>`;
   }
 
-    document.getElementById('shows-to-watch').innerHTML = previousFav
+  document.getElementById('shows-to-watch').innerHTML = previousFav;
 }
-
-function deleteFavoriteShow(event) {
-  var deleteList = JSON.parse(localStorage.getItem('watchopedia')) || []
-console.log(deleteList);
- const newarr = deleteList.filter(movieObject => movieObject.id !== event.getAttribute("data-Id"))
-localStorage.setItem('watchopedia', JSON.stringify(newarr))
-displayLocal()
-}
-// deleteFavoriteShow()
-
-
-
